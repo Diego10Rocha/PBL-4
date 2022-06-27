@@ -1,6 +1,11 @@
 EDA Netlist Writer report for PBL4
+<<<<<<< HEAD
 Mon Jun 27 18:34:09 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
+Mon Jun 27 16:41:10 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 
 ---------------------
@@ -37,9 +42,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
+<<<<<<< HEAD
 ; EDA Netlist Writer Status ; Successful - Mon Jun 27 18:34:09 2022 ;
 ; Revision Name             ; PBL4                                  ;
 ; Top-level Entity Name     ; validacao_entrada_cedula              ;
+=======
+; EDA Netlist Writer Status ; Successful - Mon Jun 27 16:41:10 2022 ;
+; Revision Name             ; PBL4                                  ;
+; Top-level Entity Name     ; modoLavagem                           ;
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 ; Family                    ; MAX II                                ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,6 +77,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
+<<<<<<< HEAD
 +----------------------------------------------------------+
 ; Simulation Generated Files                               ;
 +----------------------------------------------------------+
@@ -73,6 +85,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------+
 ; D:/workspace/2022/verilog/PBL-4/simulation/qsim//PBL4.vo ;
 +----------------------------------------------------------+
+=======
++-------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                          ;
++-------------------------------------------------------------------------------------+
+; Generated Files                                                                     ;
++-------------------------------------------------------------------------------------+
+; E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/simulation/qsim//PBL4.vo ;
++-------------------------------------------------------------------------------------+
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 
 +-----------------------------+
@@ -80,7 +101,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
+<<<<<<< HEAD
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
     Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and any partner logic 
@@ -95,6 +120,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
+<<<<<<< HEAD
     Info: Processing started: Mon Jun 27 18:34:08 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/workspace/2022/verilog/PBL-4/simulation/qsim/ PBL4 -c PBL4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -102,6 +128,15 @@ Info (204019): Generated file PBL4.vo in folder "D:/workspace/2022/verilog/PBL-4
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4618 megabytes
     Info: Processing ended: Mon Jun 27 18:34:09 2022
+=======
+    Info: Processing started: Mon Jun 27 16:41:09 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/simulation/qsim/" PBL4 -c PBL4
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file PBL4.vo in folder "E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4613 megabytes
+    Info: Processing ended: Mon Jun 27 16:41:10 2022
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

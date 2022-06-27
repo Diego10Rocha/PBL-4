@@ -15,9 +15,15 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus Prime"
+<<<<<<< HEAD
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
 // DATE "06/27/2022 18:34:09"
+=======
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "06/27/2022 16:41:10"
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -29,6 +35,7 @@
 
 `timescale 1 ps/ 1 ps
 
+<<<<<<< HEAD
 module validacao_entrada_cedula (
 	entrada_nota,
 	atividade,
@@ -46,6 +53,15 @@ input 	[2:0] state_entrada;
 output 	clear;
 output 	[2:0] erro_code;
 output 	[7:0] nota;
+=======
+module modoLavagem (
+	button,
+	reset,
+	currentState);
+input 	button;
+input 	reset;
+output 	[2:0] currentState;
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 // Design Ports Information
 
@@ -61,6 +77,7 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
+<<<<<<< HEAD
 wire \always0~0_combout ;
 wire \always0~1_combout ;
 wire \atividade~combout ;
@@ -157,6 +174,46 @@ maxii_lcell \always0~0 (
 	.datac(\state_entrada~combout [1]),
 	.datad(\state_entrada~combout [0]),
 	.aclr(gnd),
+=======
+wire \button~combout ;
+wire \reset~combout ;
+wire \currentState[2]~reg0_regout ;
+wire \currentState[1]~reg0_regout ;
+wire \currentState[0]~reg0_regout ;
+
+
+// Location: PIN_14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \button~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\button~combout ),
+	.padio(button));
+// synopsys translate_off
+defparam \button~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \reset~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\reset~combout ),
+	.padio(reset));
+// synopsys translate_off
+defparam \reset~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X2_Y4_N8
+maxii_lcell \currentState[2]~reg0 (
+// Equation(s):
+// \currentState[2]~reg0_regout  = DFFEAS(((\currentState[0]~reg0_regout  & (\currentState[1]~reg0_regout  & !\currentState[2]~reg0_regout ))), GLOBAL(\button~combout ), !GLOBAL(\reset~combout ), , , , , , )
+
+	.clk(\button~combout ),
+	.dataa(vcc),
+	.datab(\currentState[0]~reg0_regout ),
+	.datac(\currentState[1]~reg0_regout ),
+	.datad(\currentState[2]~reg0_regout ),
+	.aclr(\reset~combout ),
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
@@ -168,12 +225,18 @@ maxii_lcell \always0~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
+<<<<<<< HEAD
 	.combout(\always0~0_combout ),
 	.regout(),
+=======
+	.combout(),
+	.regout(\currentState[2]~reg0_regout ),
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
+<<<<<<< HEAD
 defparam \always0~0 .lut_mask = "000f";
 defparam \always0~0 .operation_mode = "normal";
 defparam \always0~0 .output_mode = "comb_only";
@@ -331,6 +394,27 @@ maxii_lcell clear$latch(
 	.datac(\comb~0_combout ),
 	.datad(\clear$latch~combout ),
 	.aclr(gnd),
+=======
+defparam \currentState[2]~reg0 .lut_mask = "00c0";
+defparam \currentState[2]~reg0 .operation_mode = "normal";
+defparam \currentState[2]~reg0 .output_mode = "reg_only";
+defparam \currentState[2]~reg0 .register_cascade_mode = "off";
+defparam \currentState[2]~reg0 .sum_lutc_input = "datac";
+defparam \currentState[2]~reg0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y4_N6
+maxii_lcell \currentState[1]~reg0 (
+// Equation(s):
+// \currentState[1]~reg0_regout  = DFFEAS(((!\currentState[2]~reg0_regout  & (\currentState[0]~reg0_regout  $ (\currentState[1]~reg0_regout )))), GLOBAL(\button~combout ), !GLOBAL(\reset~combout ), , , , , , )
+
+	.clk(\button~combout ),
+	.dataa(vcc),
+	.datab(\currentState[0]~reg0_regout ),
+	.datac(\currentState[1]~reg0_regout ),
+	.datad(\currentState[2]~reg0_regout ),
+	.aclr(\reset~combout ),
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
@@ -342,12 +426,18 @@ maxii_lcell clear$latch(
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
+<<<<<<< HEAD
 	.combout(\clear$latch~combout ),
 	.regout(),
+=======
+	.combout(),
+	.regout(\currentState[1]~reg0_regout ),
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
+<<<<<<< HEAD
 defparam clear$latch.lut_mask = "0f0c";
 defparam clear$latch.operation_mode = "normal";
 defparam clear$latch.output_mode = "comb_only";
@@ -439,6 +529,27 @@ maxii_lcell \erro_code[0]$latch (
 	.datac(\clear~0_combout ),
 	.datad(\erro_code[0]$latch~combout ),
 	.aclr(gnd),
+=======
+defparam \currentState[1]~reg0 .lut_mask = "003c";
+defparam \currentState[1]~reg0 .operation_mode = "normal";
+defparam \currentState[1]~reg0 .output_mode = "reg_only";
+defparam \currentState[1]~reg0 .register_cascade_mode = "off";
+defparam \currentState[1]~reg0 .sum_lutc_input = "datac";
+defparam \currentState[1]~reg0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y4_N9
+maxii_lcell \currentState[0]~reg0 (
+// Equation(s):
+// \currentState[0]~reg0_regout  = DFFEAS(((!\currentState[0]~reg0_regout  & ((!\currentState[2]~reg0_regout ) # (!\currentState[1]~reg0_regout )))), GLOBAL(\button~combout ), !GLOBAL(\reset~combout ), , , , , , )
+
+	.clk(\button~combout ),
+	.dataa(vcc),
+	.datab(\currentState[0]~reg0_regout ),
+	.datac(\currentState[1]~reg0_regout ),
+	.datad(\currentState[2]~reg0_regout ),
+	.aclr(\reset~combout ),
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 	.aload(gnd),
 	.sclr(gnd),
 	.sload(gnd),
@@ -450,12 +561,18 @@ maxii_lcell \erro_code[0]$latch (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
+<<<<<<< HEAD
 	.combout(\erro_code[0]$latch~combout ),
 	.regout(),
+=======
+	.combout(),
+	.regout(\currentState[0]~reg0_regout ),
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
+<<<<<<< HEAD
 defparam \erro_code[0]$latch .lut_mask = "cfc0";
 defparam \erro_code[0]$latch .operation_mode = "normal";
 defparam \erro_code[0]$latch .output_mode = "comb_only";
@@ -1382,6 +1499,44 @@ maxii_io \nota[7]~I (
 	.padio(nota[7]));
 // synopsys translate_off
 defparam \nota[7]~I .operation_mode = "output";
+=======
+defparam \currentState[0]~reg0 .lut_mask = "0333";
+defparam \currentState[0]~reg0 .operation_mode = "normal";
+defparam \currentState[0]~reg0 .output_mode = "reg_only";
+defparam \currentState[0]~reg0 .register_cascade_mode = "off";
+defparam \currentState[0]~reg0 .sum_lutc_input = "datac";
+defparam \currentState[0]~reg0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \currentState[0]~I (
+	.datain(\currentState[0]~reg0_regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(currentState[0]));
+// synopsys translate_off
+defparam \currentState[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \currentState[1]~I (
+	.datain(\currentState[1]~reg0_regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(currentState[1]));
+// synopsys translate_off
+defparam \currentState[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \currentState[2]~I (
+	.datain(\currentState[2]~reg0_regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(currentState[2]));
+// synopsys translate_off
+defparam \currentState[2]~I .operation_mode = "output";
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 // synopsys translate_on
 
 endmodule

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 |validacao_entrada_cedula
 entrada_nota[0] => nota[0].DATAB
 entrada_nota[1] => nota[1].DATAB
@@ -40,5 +41,17 @@ nota[4] <= nota[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
 nota[5] <= nota[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
 nota[6] <= nota[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 nota[7] <= nota[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|modoLavagem
+button => currentState[0]~reg0.CLK
+button => currentState[1]~reg0.CLK
+button => currentState[2]~reg0.CLK
+reset => currentState[0]~reg0.ACLR
+reset => currentState[1]~reg0.ACLR
+reset => currentState[2]~reg0.ACLR
+currentState[0] <= currentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+currentState[1] <= currentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+currentState[2] <= currentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 

@@ -58,25 +58,31 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 CHIP  "PBL4"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 erro_code[1]                 : 1         : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 2         :        :                   :         : 1         :                
+<<<<<<< HEAD
 GND*                         : 3         :        :                   :         : 1         :                
 GND*                         : 4         :        :                   :         : 1         :                
 GND*                         : 5         :        :                   :         : 1         :                
+=======
+currentState[0]              : 3         : output : 3.3-V LVTTL       :         : 1         : N              
+currentState[2]              : 4         : output : 3.3-V LVTTL       :         : 1         : N              
+currentState[1]              : 5         : output : 3.3-V LVTTL       :         : 1         : N              
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 GND*                         : 6         :        :                   :         : 1         :                
 GND*                         : 7         :        :                   :         : 1         :                
 GND*                         : 8         :        :                   :         : 1         :                
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-GND*                         : 12        :        :                   :         : 1         :                
+reset                        : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
-GND*                         : 14        :        :                   :         : 1         :                
+button                       : 14        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 15        :        :                   :         : 1         :                
 erro_code[2]                 : 16        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 17        :        :                   :         : 1         :                
@@ -105,11 +111,19 @@ GND*                         : 39        :        :                   :         
 entrada_nota[7]              : 40        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 41        :        :                   :         : 1         :                
 GND*                         : 42        :        :                   :         : 1         :                
+<<<<<<< HEAD
 entrada_nota[5]              : 43        : input  : 3.3-V LVTTL       :         : 1         : N              
 nota[5]                      : 44        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
 nota[7]                      : 47        : output : 3.3-V LVTTL       :         : 1         : N              
+=======
+GND*                         : 43        :        :                   :         : 1         :                
+GND*                         : 44        :        :                   :         : 1         :                
+VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
+GNDIO                        : 46        : gnd    :                   :         :           :                
+GND*                         : 47        :        :                   :         : 1         :                
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 GND*                         : 48        :        :                   :         : 1         :                
 GND*                         : 49        :        :                   :         : 1         :                
 GND*                         : 50        :        :                   :         : 1         :                
@@ -119,6 +133,7 @@ GND*                         : 53        :        :                   :         
 GND*                         : 54        :        :                   :         : 2         :                
 GND*                         : 55        :        :                   :         : 2         :                
 GND*                         : 56        :        :                   :         : 2         :                
+<<<<<<< HEAD
 erro[1]                      : 57        : input  : 3.3-V LVTTL       :         : 2         : N              
 state_entrada[0]             : 58        : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
@@ -130,6 +145,19 @@ state_entrada[2]             : 64        : input  : 3.3-V LVTTL       :         
 GNDINT                       : 65        : gnd    :                   :         :           :                
 GND*                         : 66        :        :                   :         : 2         :                
 entrada_nota[3]              : 67        : input  : 3.3-V LVTTL       :         : 2         : N              
+=======
+GND*                         : 57        :        :                   :         : 2         :                
+GND*                         : 58        :        :                   :         : 2         :                
+VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
+GNDIO                        : 60        : gnd    :                   :         :           :                
+GND*                         : 61        :        :                   :         : 2         :                
+GND*                         : 62        :        :                   :         : 2         :                
+VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
+GND*                         : 64        :        :                   :         : 2         :                
+GNDINT                       : 65        : gnd    :                   :         :           :                
+GND*                         : 66        :        :                   :         : 2         :                
+GND*                         : 67        :        :                   :         : 2         :                
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 GND*                         : 68        :        :                   :         : 2         :                
 GND*                         : 69        :        :                   :         : 2         :                
 GND*                         : 70        :        :                   :         : 2         :                
@@ -137,7 +165,11 @@ atividade                    : 71        : input  : 3.3-V LVTTL       :         
 GND*                         : 72        :        :                   :         : 2         :                
 GND*                         : 73        :        :                   :         : 2         :                
 GND*                         : 74        :        :                   :         : 2         :                
+<<<<<<< HEAD
 nota[0]                      : 75        : output : 3.3-V LVTTL       :         : 2         : N              
+=======
+GND*                         : 75        :        :                   :         : 2         :                
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 GND*                         : 76        :        :                   :         : 2         :                
 GND*                         : 77        :        :                   :         : 2         :                
 entrada_nota[2]              : 78        : input  : 3.3-V LVTTL       :         : 2         : N              
@@ -146,6 +178,7 @@ VCCIO2                       : 80        : power  :                   : 3.3V    
 state_entrada[1]             : 81        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 82        :        :                   :         : 2         :                
 GND*                         : 83        :        :                   :         : 2         :                
+<<<<<<< HEAD
 erro[2]                      : 84        : input  : 3.3-V LVTTL       :         : 2         : N              
 nota[4]                      : 85        : output : 3.3-V LVTTL       :         : 2         : N              
 time_out                     : 86        : input  : 3.3-V LVTTL       :         : 2         : N              
@@ -154,6 +187,16 @@ nota[3]                      : 88        : output : 3.3-V LVTTL       :         
 entrada_nota[1]              : 89        : input  : 3.3-V LVTTL       :         : 2         : N              
 entrada_nota[0]              : 90        : input  : 3.3-V LVTTL       :         : 2         : N              
 nota[2]                      : 91        : output : 3.3-V LVTTL       :         : 2         : N              
+=======
+GND*                         : 84        :        :                   :         : 2         :                
+GND*                         : 85        :        :                   :         : 2         :                
+GND*                         : 86        :        :                   :         : 2         :                
+GND*                         : 87        :        :                   :         : 2         :                
+GND*                         : 88        :        :                   :         : 2         :                
+GND*                         : 89        :        :                   :         : 2         :                
+GND*                         : 90        :        :                   :         : 2         :                
+GND*                         : 91        :        :                   :         : 2         :                
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 GND*                         : 92        :        :                   :         : 2         :                
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                

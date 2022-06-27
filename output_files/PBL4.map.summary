@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Mon Jun 27 18:23:33 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PBL4
@@ -5,5 +6,14 @@ Top-level Entity Name : validacao_entrada_cedula
 Family : MAX II
 Total logic elements : 28
 Total pins : 28
+=======
+Analysis & Synthesis Status : Successful - Mon Jun 27 16:39:46 2022
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : PBL4
+Top-level Entity Name : modoLavagem
+Family : MAX II
+Total logic elements : 3
+Total pins : 5
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

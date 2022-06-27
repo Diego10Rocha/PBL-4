@@ -3,7 +3,11 @@ $comment
 		vcd file PBL4.msim.vcd -direction
 $end
 $date
+<<<<<<< HEAD
 	Mon Jun 27 18:34:12 2022
+=======
+	Mon Jun 27 16:41:15 2022
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 $end
 $version
 	ModelSim Version 2020.1
@@ -12,6 +16,7 @@ $timescale
 	1ps
 $end
 
+<<<<<<< HEAD
 $scope module validacao_entrada_cedula_vlg_vec_tst $end
 $var reg 1 ! atividade $end
 $var reg 8 " entrada_nota [7:0] $end
@@ -82,12 +87,34 @@ $var wire 1 ` entrada_nota~combout [3] $end
 $var wire 1 a entrada_nota~combout [2] $end
 $var wire 1 b entrada_nota~combout [1] $end
 $var wire 1 c entrada_nota~combout [0] $end
+=======
+$scope module modoLavagem_vlg_vec_tst $end
+$var reg 1 ! button $end
+$var reg 1 " reset $end
+$var wire 1 # currentState [2] $end
+$var wire 1 $ currentState [1] $end
+$var wire 1 % currentState [0] $end
+
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , button~combout $end
+$var wire 1 - reset~combout $end
+$var wire 1 . currentState[2]~reg0_regout $end
+$var wire 1 / currentState[1]~reg0_regout $end
+$var wire 1 0 currentState[0]~reg0_regout $end
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 0!
+<<<<<<< HEAD
 b10 "
 b1 #
 b111 $
@@ -156,3 +183,217 @@ xU
 0\
 $end
 #1000000
+=======
+0"
+0%
+0$
+0#
+0&
+1'
+x(
+1)
+1*
+1+
+0,
+0-
+0.
+0/
+00
+$end
+#5000
+1!
+1,
+10
+1%
+#10000
+0!
+0,
+#15000
+1!
+1,
+00
+1/
+0%
+1$
+#20000
+0!
+0,
+#25000
+1!
+1,
+10
+1%
+#30000
+1"
+0!
+1-
+0,
+00
+0/
+0%
+0$
+#35000
+1!
+1,
+#40000
+0"
+0!
+0-
+0,
+#45000
+1!
+1,
+10
+1%
+#50000
+0!
+0,
+#55000
+1!
+1,
+00
+1/
+0%
+1$
+#60000
+0!
+0,
+#65000
+1!
+1,
+10
+1%
+#70000
+0!
+0,
+#75000
+1!
+1,
+00
+0/
+1.
+0%
+0$
+1#
+#80000
+0!
+0,
+#85000
+1!
+1,
+10
+0.
+1%
+0#
+#90000
+0!
+0,
+#95000
+1!
+1,
+00
+1/
+0%
+1$
+#100000
+0!
+0,
+#105000
+1!
+1,
+10
+1%
+#110000
+1"
+0!
+1-
+0,
+00
+0/
+0%
+0$
+#115000
+1!
+1,
+#120000
+0"
+0!
+0-
+0,
+#125000
+1!
+1,
+10
+1%
+#130000
+0!
+0,
+#135000
+1!
+1,
+00
+1/
+0%
+1$
+#140000
+0!
+0,
+#145000
+1!
+1,
+10
+1%
+#150000
+0!
+0,
+#155000
+1!
+1,
+00
+0/
+1.
+0%
+0$
+1#
+#160000
+0!
+0,
+#165000
+1!
+1,
+10
+0.
+1%
+0#
+#170000
+0!
+0,
+#175000
+1!
+1,
+00
+1/
+0%
+1$
+#180000
+0!
+0,
+#185000
+1!
+1,
+10
+1%
+#190000
+0!
+0,
+#195000
+1!
+1,
+00
+0/
+1.
+0%
+0$
+1#
+#200000
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8

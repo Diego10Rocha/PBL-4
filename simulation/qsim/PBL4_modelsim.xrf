@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+<<<<<<< HEAD
 source_file = 1, D:/workspace/2022/verilog/PBL-4/teste.v
 source_file = 1, D:/workspace/2022/verilog/PBL-4/entrada_cedula.v
 source_file = 1, D:/workspace/2022/verilog/PBL-4/Waveform.vwf
@@ -62,3 +63,18 @@ instance = comp, \nota[4]~I , nota[4], validacao_entrada_cedula, 1
 instance = comp, \nota[5]~I , nota[5], validacao_entrada_cedula, 1
 instance = comp, \nota[6]~I , nota[6], validacao_entrada_cedula, 1
 instance = comp, \nota[7]~I , nota[7], validacao_entrada_cedula, 1
+=======
+source_file = 1, E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/entrada_cedula.v
+source_file = 1, E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/modoLavagem.v
+source_file = 1, E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/modoLavagemVWF.v.vwf
+source_file = 1, E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/db/PBL4.cbx.xml
+design_name = modoLavagem
+instance = comp, \button~I , button, modoLavagem, 1
+instance = comp, \reset~I , reset, modoLavagem, 1
+instance = comp, \currentState[2]~reg0 , currentState[2]~reg0, modoLavagem, 1
+instance = comp, \currentState[1]~reg0 , currentState[1]~reg0, modoLavagem, 1
+instance = comp, \currentState[0]~reg0 , currentState[0]~reg0, modoLavagem, 1
+instance = comp, \currentState[0]~I , currentState[0], modoLavagem, 1
+instance = comp, \currentState[1]~I , currentState[1], modoLavagem, 1
+instance = comp, \currentState[2]~I , currentState[2], modoLavagem, 1
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8

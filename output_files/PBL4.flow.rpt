@@ -1,6 +1,11 @@
 Flow report for PBL4
+<<<<<<< HEAD
 Mon Jun 27 18:34:09 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
+Mon Jun 27 16:41:10 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 
 ---------------------
@@ -41,6 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status           ; Successful - Mon Jun 27 18:34:09 2022       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; PBL4                                        ;
@@ -50,6 +56,17 @@ https://fpgasoftware.intel.com/eula.
 ; Timing Models         ; Final                                       ;
 ; Total logic elements  ; 28 / 240 ( 12 % )                           ;
 ; Total pins            ; 28 / 80 ( 35 % )                            ;
+=======
+; Flow Status           ; Successful - Mon Jun 27 16:41:10 2022       ;
+; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name         ; PBL4                                        ;
+; Top-level Entity Name ; modoLavagem                                 ;
+; Family                ; MAX II                                      ;
+; Device                ; EPM240T100C5                                ;
+; Timing Models         ; Final                                       ;
+; Total logic elements  ; 3 / 240 ( 1 % )                             ;
+; Total pins            ; 5 / 80 ( 6 % )                              ;
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,12 +77,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 06/27/2022 18:23:12 ;
+=======
+; Start date & time ; 06/27/2022 16:39:18 ;
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PBL4                ;
 +-------------------+---------------------+
 
 
+<<<<<<< HEAD
 +--------------------------------------------------------------------------------------------------------------------+
 ; Flow Non-Default Global Settings                                                                                   ;
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
@@ -78,6 +100,25 @@ https://fpgasoftware.intel.com/eula.
 ; PROJECT_OUTPUT_DIRECTORY              ; output_files                    ; --            ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                      ; validacao_entrada_cedula        ; PBL4          ; --          ; --         ;
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
+=======
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                             ;
++---------------------------------------+-----------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                       ; Value                                                                 ; Default Value ; Entity Name ; Section Id     ;
++---------------------------------------+-----------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                 ; 128534996928408.165635875810420                                       ; --            ; --          ; --             ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR         ; E:\User Diego\UEFS\MI Peojetos de Circuitos Digitais\PBL 4\simulation ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT                ; Verilog Hdl                                                           ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (Verilog)                                             ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                        ; 1 ps                                                                  ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                                                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                                                                     ; --            ; --          ; --             ;
+; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                                                                  ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION         ; No Heat Sink With Still Air                                           ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY              ; output_files                                                          ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                      ; modoLavagem                                                           ; PBL4          ; --          ; --             ;
++---------------------------------------+-----------------------------------------------------------------------+---------------+-------------+----------------+
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -85,6 +126,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4700 MB             ; 00:00:43                           ;
 ; Fitter               ; 00:00:03     ; 1.0                     ; 5070 MB             ; 00:00:02                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4656 MB             ; 00:00:01                           ;
@@ -94,6 +136,16 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4606 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4618 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:34     ; --                      ; --                  ; 00:00:52                           ;
+=======
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4698 MB             ; 00:00:57                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5071 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4615 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4608 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4613 MB             ; 00:00:01                           ;
+; Total                ; 00:00:39     ; --                      ; --                  ; 00:01:05                           ;
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -102,6 +154,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; DESKTOP-NTOG0TU  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; DESKTOP-NTOG0TU  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-NTOG0TU  ; Windows 10 ; 10.0       ; x86_64         ;
@@ -110,6 +163,15 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; DESKTOP-NTOG0TU  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-NTOG0TU  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-NTOG0TU  ; Windows 10 ; 10.0       ; x86_64         ;
+=======
+; Analysis & Synthesis ; DESKTOP-SGQ11O9  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-SGQ11O9  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-SGQ11O9  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-SGQ11O9  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SGQ11O9  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SGQ11O9  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-SGQ11O9  ; Windows 10 ; 10.0       ; x86_64         ;
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -120,10 +182,16 @@ quartus_map --read_settings_files=on --write_settings_files=off PBL4 -c PBL4
 quartus_fit --read_settings_files=off --write_settings_files=off PBL4 -c PBL4
 quartus_asm --read_settings_files=off --write_settings_files=off PBL4 -c PBL4
 quartus_sta PBL4 -c PBL4
+<<<<<<< HEAD
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL4 -c PBL4 --vector_source=D:/workspace/2022/verilog/PBL-4/Waveform1.vwf --testbench_file=D:/workspace/2022/verilog/PBL-4/simulation/qsim/Waveform1.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/workspace/2022/verilog/PBL-4/simulation/qsim/ PBL4 -c PBL4
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL4 -c PBL4 --vector_source=D:/workspace/2022/verilog/PBL-4/Waveform1.vwf --testbench_file=D:/workspace/2022/verilog/PBL-4/simulation/qsim/Waveform1.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/workspace/2022/verilog/PBL-4/simulation/qsim/ PBL4 -c PBL4
+=======
+quartus_eda --read_settings_files=off --write_settings_files=off PBL4 -c PBL4
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL4 -c PBL4 --vector_source="E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/modoLavagemVWF.v.vwf" --testbench_file="E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/simulation/qsim/modoLavagemVWF.v.vwf.vt"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="E:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/simulation/qsim/" PBL4 -c PBL4
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 
 
 

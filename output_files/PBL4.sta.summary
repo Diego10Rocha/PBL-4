@@ -2,6 +2,7 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+<<<<<<< HEAD
 Type  : Setup 'atividade'
 Slack : -2.023
 TNS   : -15.791
@@ -11,6 +12,17 @@ Slack : 0.261
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'atividade'
+=======
+Type  : Setup 'button'
+Slack : -1.702
+TNS   : -5.101
+
+Type  : Hold 'button'
+Slack : 1.680
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'button'
+>>>>>>> daca1071302adbfce43ce2a29ac26739ca9480a8
 Slack : -2.289
 TNS   : -2.289
 
