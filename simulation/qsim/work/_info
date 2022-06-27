@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/User Diego/UEFS/MI Peojetos de Circuitos Digitais/PBL 4/simulation/qsim
+vmodoLavagem
+!s110 1656358873
+!i10b 1
+!s100 Qbc_LHiYIWP78K^1Z0VfD3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6Vaz9FN_^eBl6Qob9V`DW2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1656358870
+8PBL4.vo
+FPBL4.vo
+!i122 2
+L0 32 188
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1656358873.000000
+!s107 PBL4.vo|
+!s90 -work|work|PBL4.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+nmodo@lavagem
+vmodoLavagem_vlg_vec_tst
+!s110 1656358874
+!i10b 1
+!s100 L=gk=NZ61JS^WJCN2`zHj1
+R1
+I;^5OMd>f>E5T96zaDOidb2
+R2
+R0
+w1656358868
+8modoLavagemVWF.v.vwf.vt
+FmodoLavagemVWF.v.vwf.vt
+!i122 3
+L0 30 38
+R3
+r1
+!s85 0
+31
+!s108 1656358874.000000
+!s107 modoLavagemVWF.v.vwf.vt|
+!s90 -work|work|modoLavagemVWF.v.vwf.vt|
+!i113 1
+R4
+R5
+nmodo@lavagem_vlg_vec_tst

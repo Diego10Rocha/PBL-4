@@ -2,7 +2,15 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Minimum Pulse Width 'state_entrada[0]'
+Type  : Setup 'button'
+Slack : -1.702
+TNS   : -5.101
+
+Type  : Hold 'button'
+Slack : 1.680
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'button'
 Slack : -2.289
 TNS   : -2.289
 
