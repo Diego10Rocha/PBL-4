@@ -1,53 +1,160 @@
-//Modulo de cedulas entradas
+//Modulo de cedulas entradas -- Decodificador de cedula
 //entrada_nota -> Valor inserido de cedula 
 //state_entrada ->Estado Atual
 //valor_saida -> Saida do valor de cédulas correspondentes
-//state_saida - > Proximo estado
+//erro_code - > Proximo estado
+//ok -> Confirmação de cedula
 
 module entrada_cedula(
 	
-	input [2:0]entrada_nota,
+	input ok,
 	input [2:0] state_entrada,
+	output reg atividade,
+	input [2:0]entrada_nota,
 	output reg [7:0]valor_saida,
-	output reg [2:0] state_saida
+	output reg [2:0] erro_code
 );
 
-parameter zero =000, dois=001, cinco =010, dez=011, vinte = 100, cinquenta = 101, cem =110, duzentos = 111;
+parameter zero =3'b000, dois=3'b001, cinco =3'b010, dez=3'b011, vinte = 3'b100, cinquenta = 3'b101, cem =3'b110, duzentos = 3'b111;
 
-always @(entrada_nota,state_entrada)
+always @(entrada_nota, ok)
+begin
+	if ((state_entrada == 3'b000) && (ok))
+		begin 
+			case(entrada_nota)
+				zero:
+					begin
+					valor_saida = 8'b00000000;
+					erro_code = 3'b000;
+					atividade =1;
+					end
+				dois:
+					begin
+					valor_saida = 8'b00000010;
+					erro_code = 3'b000;
+					atividade=1;
+					end
+				cinco:
+					begin
+					valor_saida = 8'b00000101;
+					erro_code = 3'b000;
+					atividade=1;
+					end
 
-if (state_entrada == 000)
-	begin 
-		case(entrada_nota)
-			zero:
-				valor_saida = 8'b00000000;
+				dez:
+					begin
+					valor_saida = 8'b00001010;
+					erro_code=3'b000;
+					atividade=1;
+					end
 				
-			dois:
-				valor_saida = 8'b00000010;
+				vinte:
+					begin
+					valor_saida = 8'b00010100;
+					erro_code = 3'b001;
+					atividade=1;
+					end
+
+				cinquenta:
+					begin
+					valor_saida= 8'b00110010;
+					erro_code = 3'b001;
+					atividade=1;
+					end
 				
-			cinco:
-				valor_saida = 8'b00000101;
+				cem:
+				begin
+					valor_saida=8'b01100100;
+					erro_code = 3'b001;
+					atividade=1;
+				 end
+				duzentos:
+				begin
+						 valor_saida=8'b11001000;
+						 erro_code = 3'b001;
+						 atividade=1;
+				end
+				default:
+				begin
+					valor_saida = 8'b00000000;
+					erro_code = 3'b001;
+					atividade=1;
+				end
+					
+				endcase
+		end
+		
+	if ((state_entrada == 3'b000) && (!ok))
+		begin 
+			case(entrada_nota)
+				zero:
+					begin
+					valor_saida = 8'b00000000;
+					erro_code = 3'b000;
+					atividade =0;
+					end
+				dois:
+					begin
+					valor_saida = 8'b00000010;
+					erro_code = 3'b000;
+					atividade=1;
+					end
+				cinco:
+					begin
+					valor_saida = 8'b00000101;
+					erro_code = 3'b000;
+					atividade=1;
+					end
 
-			dez:
-				valor_saida = 8'b00001010;
-			
-			vinte:
-				valor_saida = 8'b00010100;
-
-			cinquenta:
-				valor_saida= 8'b00110010;
-			
-			cem:
-				valor_saida=8'b01100100;
-            
-         duzentos:
-                valor_saida=8'b11001000;
-			
-			default:
-				valor_saida = 8'b00000000;
+				dez:
+					begin
+					valor_saida = 8'b00001010;
+					erro_code=3'b000;
+					atividade=1;
+					end
 				
-			endcase
-	end
+				vinte:
+					begin
+					valor_saida = 8'b00010100;
+					erro_code = 3'b001;
+					atividade=1;
+					end
 
+				cinquenta:
+					begin
+					valor_saida= 8'b00110010;
+					erro_code = 3'b001;
+					atividade=1;
+					end
+				
+				cem:
+				begin
+					valor_saida=8'b01100100;
+					erro_code = 3'b001;
+					atividade=1;
+				 end
+				duzentos:
+				begin
+						 valor_saida=8'b11001000;
+						 erro_code = 3'b001;
+						 atividade=1;
+				end
+				default:
+				begin
+					valor_saida = 8'b00000000;
+					erro_code = 3'b001;
+					atividade=0;
+				end
+					
+				endcase
+	end	
+
+else
+		begin
+			valor_saida=8'b00000000;
+			erro_code = 3'b000;
+			atividade=1;
+		end
+end
 
 endmodule
