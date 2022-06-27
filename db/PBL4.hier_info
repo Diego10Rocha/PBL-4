@@ -1,0 +1,20 @@
+|entrada_cedula
+entrada_nota[0] => Equal1.IN63
+entrada_nota[1] => Equal1.IN62
+entrada_nota[2] => Equal1.IN61
+state_entrada[0] => Equal0.IN31
+state_entrada[1] => Equal0.IN30
+state_entrada[2] => Equal0.IN29
+valor_saida[0] <= <GND>
+valor_saida[1] <= valor_saida[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+valor_saida[2] <= <GND>
+valor_saida[3] <= <GND>
+valor_saida[4] <= <GND>
+valor_saida[5] <= <GND>
+valor_saida[6] <= <GND>
+valor_saida[7] <= <GND>
+state_saida[0] <= <GND>
+state_saida[1] <= <GND>
+state_saida[2] <= <GND>
+
+

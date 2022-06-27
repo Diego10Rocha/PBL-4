@@ -1,0 +1,53 @@
+//Modulo de cedulas entradas
+//entrada_nota -> Valor inserido de cedula 
+//state_entrada ->Estado Atual
+//valor_saida -> Saida do valor de cédulas correspondentes
+//state_saida - > Proximo estado
+
+module entrada_cedula(
+	
+	input [2:0]entrada_nota,
+	input [2:0] state_entrada,
+	output reg [7:0]valor_saida,
+	output reg [2:0] state_saida
+);
+
+parameter zero =000, dois=001, cinco =010, dez=011, vinte = 100, cinquenta = 101, cem =110, duzentos = 111;
+
+always @(entrada_nota,state_entrada)
+
+if (state_entrada == 000)
+	begin 
+		case(entrada_nota)
+			zero:
+				valor_saida = 8'b00000000;
+				
+			dois:
+				valor_saida = 8'b00000010;
+				
+			cinco:
+				valor_saida = 8'b00000101;
+
+			dez:
+				valor_saida = 8'b00001010;
+			
+			vinte:
+				valor_saida = 8'b00010100;
+
+			cinquenta:
+				valor_saida= 8'b00110010;
+			
+			cem:
+				valor_saida=8'b01100100;
+            
+         duzentos:
+                valor_saida=8'b11001000;
+			
+			default:
+				valor_saida = 8'b00000000;
+				
+			endcase
+	end
+
+
+endmodule
