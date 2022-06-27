@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Jun 27 15:27:07 2022
+Fitter Status : Successful - Mon Jun 27 18:23:37 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PBL4
-Top-level Entity Name : entrada_cedula
+Top-level Entity Name : validacao_entrada_cedula
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 3 / 240 ( 1 % )
-Total pins : 17 / 80 ( 21 % )
+Total logic elements : 28 / 240 ( 12 % )
+Total pins : 28 / 80 ( 35 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at validacao_entrada_cedula.v(23): always construct contains both blocking and non-blocking assignments File: D:/workspace/2022/verilog/PBL-4/validacao_entrada_cedula.v Line: 23

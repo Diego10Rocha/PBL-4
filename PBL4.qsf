@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY entrada_cedula
+set_global_assignment -name TOP_LEVEL_ENTITY validacao_entrada_cedula
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:54:53  JUNE 27, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -50,3 +50,7 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name VERILOG_FILE teste.v
 set_global_assignment -name VERILOG_FILE entrada_cedula.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VERILOG_FILE counter_byte.v
+set_global_assignment -name VERILOG_FILE validacao_entrada_cedula.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf

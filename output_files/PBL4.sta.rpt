@@ -1,5 +1,5 @@
 Timing Analyzer report for PBL4
-Mon Jun 27 15:27:15 2022
+Mon Jun 27 18:23:43 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,16 +16,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Recovery Summary
   9. Removal Summary
  10. Minimum Pulse Width Summary
- 11. Clock Transfers
- 12. Report TCCS
- 13. Report RSKM
- 14. Unconstrained Paths Summary
- 15. Clock Status Summary
- 16. Unconstrained Input Ports
- 17. Unconstrained Output Ports
- 18. Unconstrained Input Ports
- 19. Unconstrained Output Ports
- 20. Timing Analyzer Messages
+ 11. Setup: 'atividade'
+ 12. Hold: 'atividade'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Timing Analyzer Messages
 
 
 
@@ -79,31 +82,41 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                             ;
-+------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
-; Clock Name       ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets              ;
-+------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
-; state_entrada[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { state_entrada[0] } ;
-+------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; atividade  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { atividade } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
 
 
-----------------
-; Fmax Summary ;
-----------------
-No paths to report.
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 198.18 MHz ; 198.18 MHz      ; atividade  ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
------------------
-; Setup Summary ;
------------------
-No paths to report.
++------------------------------------+
+; Setup Summary                      ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; atividade ; -2.023 ; -15.791       ;
++-----------+--------+---------------+
 
 
-----------------
-; Hold Summary ;
-----------------
-No paths to report.
++-----------------------------------+
+; Hold Summary                      ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; atividade ; 0.261 ; 0.000         ;
++-----------+-------+---------------+
 
 
 --------------------
@@ -118,19 +131,89 @@ No paths to report.
 No paths to report.
 
 
-+-------------------------------------------+
-; Minimum Pulse Width Summary               ;
-+------------------+--------+---------------+
-; Clock            ; Slack  ; End Point TNS ;
-+------------------+--------+---------------+
-; state_entrada[0] ; -2.289 ; -2.289        ;
-+------------------+--------+---------------+
++------------------------------------+
+; Minimum Pulse Width Summary        ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; atividade ; -2.289 ; -2.289        ;
++-----------+--------+---------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++---------------------------------------------------------------------------------------------------------------+
+; Setup: 'atividade'                                                                                            ;
++--------+-----------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+--------------------+--------------+-------------+--------------+------------+------------+
+; -2.023 ; atividade ; nota[3]$latch      ; atividade    ; atividade   ; 0.500        ; 9.042      ; 9.721      ;
+; -1.829 ; atividade ; nota[5]$latch      ; atividade    ; atividade   ; 0.500        ; 8.917      ; 9.808      ;
+; -1.791 ; atividade ; nota[7]$latch      ; atividade    ; atividade   ; 0.500        ; 8.910      ; 9.762      ;
+; -1.698 ; atividade ; nota[2]$latch      ; atividade    ; atividade   ; 0.500        ; 9.049      ; 9.419      ;
+; -1.678 ; atividade ; nota[1]$latch      ; atividade    ; atividade   ; 0.500        ; 9.052      ; 9.801      ;
+; -1.572 ; atividade ; nota[0]$latch      ; atividade    ; atividade   ; 0.500        ; 9.043      ; 9.685      ;
+; -1.523 ; atividade ; nota[3]$latch      ; atividade    ; atividade   ; 1.000        ; 9.042      ; 9.721      ;
+; -1.382 ; atividade ; erro_code[1]$latch ; atividade    ; atividade   ; 0.500        ; 8.873      ; 9.336      ;
+; -1.338 ; atividade ; erro_code[0]$latch ; atividade    ; atividade   ; 0.500        ; 8.875      ; 9.274      ;
+; -1.329 ; atividade ; nota[5]$latch      ; atividade    ; atividade   ; 1.000        ; 8.917      ; 9.808      ;
+; -1.291 ; atividade ; nota[7]$latch      ; atividade    ; atividade   ; 1.000        ; 8.910      ; 9.762      ;
+; -1.280 ; atividade ; nota[4]$latch      ; atividade    ; atividade   ; 0.500        ; 9.051      ; 9.412      ;
+; -1.200 ; atividade ; nota[6]$latch      ; atividade    ; atividade   ; 0.500        ; 8.916      ; 9.177      ;
+; -1.198 ; atividade ; nota[2]$latch      ; atividade    ; atividade   ; 1.000        ; 9.049      ; 9.419      ;
+; -1.178 ; atividade ; nota[1]$latch      ; atividade    ; atividade   ; 1.000        ; 9.052      ; 9.801      ;
+; -1.072 ; atividade ; nota[0]$latch      ; atividade    ; atividade   ; 1.000        ; 9.043      ; 9.685      ;
+; -0.882 ; atividade ; erro_code[1]$latch ; atividade    ; atividade   ; 1.000        ; 8.873      ; 9.336      ;
+; -0.838 ; atividade ; erro_code[0]$latch ; atividade    ; atividade   ; 1.000        ; 8.875      ; 9.274      ;
+; -0.780 ; atividade ; nota[4]$latch      ; atividade    ; atividade   ; 1.000        ; 9.051      ; 9.412      ;
+; -0.700 ; atividade ; nota[6]$latch      ; atividade    ; atividade   ; 1.000        ; 8.916      ; 9.177      ;
++--------+-----------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Hold: 'atividade'                                                                                            ;
++-------+-----------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.261 ; atividade ; nota[6]$latch      ; atividade    ; atividade   ; 0.000        ; 8.916      ; 9.177      ;
+; 0.361 ; atividade ; nota[4]$latch      ; atividade    ; atividade   ; 0.000        ; 9.051      ; 9.412      ;
+; 0.370 ; atividade ; nota[2]$latch      ; atividade    ; atividade   ; 0.000        ; 9.049      ; 9.419      ;
+; 0.399 ; atividade ; erro_code[0]$latch ; atividade    ; atividade   ; 0.000        ; 8.875      ; 9.274      ;
+; 0.463 ; atividade ; erro_code[1]$latch ; atividade    ; atividade   ; 0.000        ; 8.873      ; 9.336      ;
+; 0.642 ; atividade ; nota[0]$latch      ; atividade    ; atividade   ; 0.000        ; 9.043      ; 9.685      ;
+; 0.679 ; atividade ; nota[3]$latch      ; atividade    ; atividade   ; 0.000        ; 9.042      ; 9.721      ;
+; 0.749 ; atividade ; nota[1]$latch      ; atividade    ; atividade   ; 0.000        ; 9.052      ; 9.801      ;
+; 0.761 ; atividade ; nota[6]$latch      ; atividade    ; atividade   ; -0.500       ; 8.916      ; 9.177      ;
+; 0.852 ; atividade ; nota[7]$latch      ; atividade    ; atividade   ; 0.000        ; 8.910      ; 9.762      ;
+; 0.861 ; atividade ; nota[4]$latch      ; atividade    ; atividade   ; -0.500       ; 9.051      ; 9.412      ;
+; 0.870 ; atividade ; nota[2]$latch      ; atividade    ; atividade   ; -0.500       ; 9.049      ; 9.419      ;
+; 0.891 ; atividade ; nota[5]$latch      ; atividade    ; atividade   ; 0.000        ; 8.917      ; 9.808      ;
+; 0.899 ; atividade ; erro_code[0]$latch ; atividade    ; atividade   ; -0.500       ; 8.875      ; 9.274      ;
+; 0.963 ; atividade ; erro_code[1]$latch ; atividade    ; atividade   ; -0.500       ; 8.873      ; 9.336      ;
+; 1.142 ; atividade ; nota[0]$latch      ; atividade    ; atividade   ; -0.500       ; 9.043      ; 9.685      ;
+; 1.179 ; atividade ; nota[3]$latch      ; atividade    ; atividade   ; -0.500       ; 9.042      ; 9.721      ;
+; 1.249 ; atividade ; nota[1]$latch      ; atividade    ; atividade   ; -0.500       ; 9.052      ; 9.801      ;
+; 1.352 ; atividade ; nota[7]$latch      ; atividade    ; atividade   ; -0.500       ; 8.910      ; 9.762      ;
+; 1.391 ; atividade ; nota[5]$latch      ; atividade    ; atividade   ; -0.500       ; 8.917      ; 9.808      ;
++-------+-----------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; atividade  ; atividade ; 0        ; 0        ; 10       ; 10       ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; atividade  ; atividade ; 0        ; 0        ; 10       ; 10       ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -152,60 +235,106 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 3     ; 3    ;
-; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 86    ; 86   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 12    ; 12   ;
 +---------------------------------+-------+------+
 
 
-+----------------------------------------------------------+
-; Clock Status Summary                                     ;
-+------------------+------------------+------+-------------+
-; Target           ; Clock            ; Type ; Status      ;
-+------------------+------------------+------+-------------+
-; state_entrada[0] ; state_entrada[0] ; Base ; Constrained ;
-+------------------+------------------+------+-------------+
++--------------------------------------------+
+; Clock Status Summary                       ;
++-----------+-----------+------+-------------+
+; Target    ; Clock     ; Type ; Status      ;
++-----------+-----------+------+-------------+
+; atividade ; atividade ; Base ; Constrained ;
++-----------+-----------+------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                              ;
-+-----------------+--------------------------------------------------------------------------------------+
-; Input Port      ; Comment                                                                              ;
-+-----------------+--------------------------------------------------------------------------------------+
-; entrada_nota[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; entrada_nota[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; entrada_nota[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-----------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; entrada_nota[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro[0]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro[1]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro[2]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; state_entrada[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; state_entrada[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; state_entrada[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; time_out         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                             ;
-+----------------+---------------------------------------------------------------------------------------+
-; Output Port    ; Comment                                                                               ;
-+----------------+---------------------------------------------------------------------------------------+
-; valor_saida[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+----------------+---------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; clear        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro_code[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro_code[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro_code[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                              ;
-+-----------------+--------------------------------------------------------------------------------------+
-; Input Port      ; Comment                                                                              ;
-+-----------------+--------------------------------------------------------------------------------------+
-; entrada_nota[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; entrada_nota[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; entrada_nota[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-----------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; entrada_nota[0]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[2]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[3]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[4]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[5]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[6]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; entrada_nota[7]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro[0]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro[1]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro[2]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; state_entrada[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; state_entrada[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; state_entrada[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; time_out         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                             ;
-+----------------+---------------------------------------------------------------------------------------+
-; Output Port    ; Comment                                                                               ;
-+----------------+---------------------------------------------------------------------------------------+
-; valor_saida[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+----------------+---------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                           ;
++--------------+---------------------------------------------------------------------------------------+
+; Output Port  ; Comment                                                                               ;
++--------------+---------------------------------------------------------------------------------------+
+; clear        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro_code[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro_code[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; erro_code[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nota[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -214,7 +343,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Jun 27 15:27:13 2022
+    Info: Processing started: Mon Jun 27 18:23:40 2022
 Info: Command: quartus_sta PBL4 -c PBL4
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -223,30 +352,35 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 12 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'PBL4.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name state_entrada[0] state_entrada[0]
+    Info (332105): create_clock -period 1.000 -name atividade atividade
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332140): No fmax paths to report
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.023
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.023             -15.791 atividade 
+Info (332146): Worst-case hold slack is 0.261
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.261               0.000 atividade 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -2.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.289              -2.289 state_entrada[0] 
+    Info (332119):    -2.289              -2.289 atividade 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4659 megabytes
-    Info: Processing ended: Mon Jun 27 15:27:15 2022
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4657 megabytes
+    Info: Processing ended: Mon Jun 27 18:23:43 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

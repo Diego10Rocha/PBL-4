@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/workspace/2022/verilog/PBL-4/simulation/qsim
+ventrada_cedula
+Z1 !s110 1656359442
+!i10b 1
+!s100 STWl1NiHA00hE9W`EXQo>0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6KQ3gMP4k:5o_@]CJX1f63
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1656359438
+Z4 8PBL4.vo
+Z5 FPBL4.vo
+!i122 12
+L0 32 1038
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1656359441.000000
+Z7 !s107 PBL4.vo|
+Z8 !s90 -work|work|PBL4.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+ventrada_cedula_vlg_vec_tst
+R1
+!i10b 1
+!s100 cCIo]BZH:[KCejMiOI9ie1
+R2
+I>?j9hZD4MU[L1aYTl>gmD1
+R3
+R0
+w1656359436
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 13
+L0 30 62
+R6
+r1
+!s85 0
+31
+!s108 1656359442.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R9
+R10
+vvalidacao_entrada_cedula
+!s110 1656365651
+!i10b 1
+!s100 e[HQn>0:9Ph538VNFP;hT1
+R2
+IHUGKk]m^EJQLQfhMMZJ@21
+R3
+R0
+w1656365649
+R4
+R5
+!i122 26
+L0 32 1356
+R6
+r1
+!s85 0
+31
+Z11 !s108 1656365651.000000
+R7
+R8
+!i113 1
+R9
+R10
+vvalidacao_entrada_cedula_vlg_vec_tst
+!s110 1656365652
+!i10b 1
+!s100 NlE6O<1J=_DZf;CLV0eZG3
+R2
+IUmgY`f_gK<1H??=9aJ5?b1
+R3
+R0
+w1656365648
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 27
+L0 30 112
+R6
+r1
+!s85 0
+31
+R11
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R9
+R10
